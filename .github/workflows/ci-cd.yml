@@ -27,6 +27,12 @@ jobs:
       run: |
         pip install flake8
         flake8 .
+
+    - name: Set up DVC
+      uses: iterative/setup-dvc@v1
+
+    - name: Pull DVC data
+      run: dvc pull
     
     - name: Run tests
       run: |
